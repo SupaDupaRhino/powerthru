@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    TrackMyGames.com - Home
+  </title>
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="WebsiteStyle.css" type="text/css">
+        <script src="./index.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <h2>Track My Game <img id="logo"src="https://www.pngitem.com/pimgs/m/6-65089_facebook-instant-games-logo-video-game-logo-png.png"></h2>
+        <div class="topnav">
+            <a class="active" href="home.html">Home</a>
+            <a href="topgames.html">Top Games</a>
+            <a href="newreleases.html">New Releases</a>
+            <a href="hotnow.html">Hot Now</a>
+            <div class="search-container">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          
+          <div class="slideshow-container">
+          
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <a href="minecraft.html"><img src="https://compass-ssl.xbox.com/assets/7e/16/7e16ab6a-ced9-4840-b2d1-4f8e7e769c9d.jpg?n=Minecraft_Page-Hero-1084_2019-Keyart_1920x880_03.jpg" style="width:100%"></a>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="https://th.bing.com/th/id/R.e1b1bf54e8cd12ce4b7d395e583776b1?rik=EQaewJYg3%2fb1yw&riu=http%3a%2f%2fwww.zastavki.com%2fpictures%2foriginals%2f2015%2fGames_Poster_Game_League_of_Legends_099460_.jpg&ehk=ni%2b2YFMUff4WFDNl2g1WiqjIHpNq9ahixOmmKj5bEPM%3d&risl=&pid=ImgRaw&r=0" style="width:100%">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <a href="gtaV.html"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/capsule_616x353.jpg?t=1618856444" style="width:100%"></a>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+          
+          <script>
+          var slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); 
+          }
+          </script>
+    </body>
+</html>
